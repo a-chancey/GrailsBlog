@@ -1,0 +1,14 @@
+\target
+\target-eclipse
+.classpath
+\.settings
+.project
+
+# OS GENERATED FILES #
+######################
+.DS_Store
+_Store?
+._*
+.Spotlight-V100
+.Trashes
+Thumbs.db
