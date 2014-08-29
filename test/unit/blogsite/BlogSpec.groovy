@@ -14,7 +14,7 @@ class BlogSpec extends Specification {
 
     def cleanup() {
     }
-
+//comment for testing
     void "test something"() {
     }
 }
