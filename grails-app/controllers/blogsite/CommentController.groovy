@@ -3,10 +3,11 @@ package blogsite
 class CommentController {
 
     def edit = {
+		def post = Post.get(params.id)
         render(view:'edit',
                 model:[
                         comment:new Comment(),
-                        postId:params.postId])
+                        postId:post.id])
     }
 
     def save = {
