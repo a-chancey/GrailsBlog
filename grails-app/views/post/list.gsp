@@ -7,7 +7,7 @@
   <h1>My Posts</h1>
 
   <g:each in="${posts}" var="post">
-      <div>
+      <div id="${post.id}">
           <g:link controller="post" action="view" id="${post.id}"><h2>${post.title}</h2></g:link>
           <p>${post.teaser}</p>
           <p>Last Updated: ${post.lastUpdated}</p>
