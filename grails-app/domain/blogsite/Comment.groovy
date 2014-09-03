@@ -6,6 +6,7 @@ class Comment implements Comparable{
 	String comment
 	Commentator who = new Commentator()
 	Date dateCreated
+
 	
     public int compareTo(Object o) {
 		return dateCreated.compareTo(o.dateCreated)

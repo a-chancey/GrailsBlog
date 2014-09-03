@@ -16,6 +16,10 @@
 		${post.content}
 	</div>
 	<div>
+	<g:link controller="comment" action="edit" id="${post.id}">Add Comment </g:link>
+		<g:if test="${post.comments.isEmpty()}">
+		</g:if>
+		<g:else>
 		<h5>Comments:</h5>
 		<g:each in="${post.comments}" var="comment">
 			<div class="comment">
@@ -30,6 +34,7 @@
 				</p>
 			</div>
 		</g:each>
+		</g:else>
 	</div>
 
 </body>
