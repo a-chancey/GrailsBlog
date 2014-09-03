@@ -41,7 +41,9 @@
 <main role="main">
 	<div class="container-fluid">
 		<div class="row">
-		<div class="col-sm-8">
+		<div class="col-sm-2">
+		</div>
+		<div class="col-sm-6">
 		<h1>My Posts</h1>
 		<g:each in="${posts}" var="post">
 			<div id="${post.id}">
@@ -79,9 +81,17 @@
 	</div>
 	</main>
 <footer role="contentInfo">
-	<p>
-		<small>Copyright &copy; Manifest Solutions 2014, Written by Aaron Chancey and John Leonardo</small>
-	</p>
+	<div class="container-fluid">
+			<div class="col-sm-2"></div>
+			<div class="col-sm-8">
+				<p>
+					<small>Copyright &copy; Manifest Solutions 2014, Written by
+						Aaron Chancey and John Leonardo</small>
+				</p>
+			</div>
+			<div class="col-sm-2"></div>
+
+		</div>
 </footer>
   
 

@@ -35,7 +35,7 @@ img {
 				</div>
 				<div class="collapse navbar-collapse">
 					<ul class="nav navbar-nav">
-						<li class="active"><a href="/BlogSite/">Home</a></li>
+						<li><a href="/BlogSite/">Home</a></li>
 						<%--
 					<li><a href="link.html">Link</a></li>
 					<li><a href="adultlink.html">Adult Link</a></li>--%>
@@ -48,7 +48,7 @@ img {
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col-sm-2">
-			<img src="/BlogSite/images/Dance_cat.gif">
+				<img src="/BlogSite/images/Dance_cat.gif">
 			</div>
 			<div class="col-sm-6">
 				<h1>Create a comment</h1>
@@ -79,19 +79,26 @@ img {
 					<g:submitButton name="submit" value="Save" />
 				</g:form>
 			</div>
-		
-		<div class="col-sm-4">
-			<g:link controller="post" action="edit">Create a new post </g:link>
-			<br /> About me! <br /> More stuff to come!
-		</div>
+
+			<div class="col-sm-4">
+				<g:link controller="post" action="edit">Create a new post </g:link>
+				<br /> About me! <br /> More stuff to come!
+			</div>
 		</div>
 	</div>
 	</main>
 	<footer role="contentInfo">
-		<p>
-			<small>Copyright &copy; Manifest Solutions 2014, Written by
-				Aaron Chancey and John Leonardo</small>
-		</p>
+		<div class="container-fluid">
+			<div class="col-sm-2"></div>
+			<div class="col-sm-8">
+				<p>
+					<small>Copyright &copy; Manifest Solutions 2014, Written by
+						Aaron Chancey and John Leonardo</small>
+				</p>
+			</div>
+			<div class="col-sm-2"></div>
+
+		</div>
 	</footer>
 
 </body>

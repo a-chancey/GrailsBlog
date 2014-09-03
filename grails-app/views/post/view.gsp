@@ -32,7 +32,7 @@
 				</div>
 				<div class="collapse navbar-collapse">	
 				<ul class="nav navbar-nav">
-					<li class="active"><a href="/BlogSite/">Home</a></li><%--
+					<li><a href="/BlogSite/">Home</a></li><%--
 					<li><a href="link.html">Link</a></li>
 					<li><a href="adultlink.html">Adult Link</a></li>--%>
 				</ul>
@@ -43,7 +43,9 @@
 <main role="main">
 	<div class="container-fluid">
 		<div class="row">
-		<div class="col-sm-8">
+		<div class="col-sm-2">
+		</div>
+		<div class="col-sm-6">
 	<h1>
 		${post.title}
 	</h1>
@@ -86,9 +88,17 @@
 	</div>
 	</main>
 <footer role="contentInfo">
-	<p>
-		<small>Copyright &copy; Manifest Solutions 2014, Written by Aaron Chancey and John Leonardo</small>
-	</p>
+	<div class="container-fluid">
+			<div class="col-sm-2"></div>
+			<div class="col-sm-8">
+				<p>
+					<small>Copyright &copy; Manifest Solutions 2014, Written by
+						Aaron Chancey and John Leonardo</small>
+				</p>
+			</div>
+			<div class="col-sm-2"></div>
+
+		</div>
 </footer>
   
 
