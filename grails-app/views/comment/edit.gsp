@@ -8,6 +8,8 @@
 	href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 <link rel="stylesheet"
 	href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+<link rel="stylesheet" href="/BlogSite/css/styles.css">
+
 <script
 	src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script
@@ -88,16 +90,11 @@ img {
 	</div>
 	</main>
 	<footer role="contentInfo">
-		<div class="container-fluid">
-			<div class="col-sm-2"></div>
-			<div class="col-sm-8">
-				<p>
-					<small>Copyright &copy; Manifest Solutions 2014, Written by
-						Aaron Chancey and John Leonardo</small>
-				</p>
-			</div>
-			<div class="col-sm-2"></div>
-
+		<div class="footer">
+			<p>
+				<small>Copyright &copy; Manifest Solutions 2014, Written by
+					Aaron Chancey and John Leonardo</small>
+			</p>
 		</div>
 	</footer>
 
