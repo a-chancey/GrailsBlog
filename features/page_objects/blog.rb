@@ -3,17 +3,18 @@ require 'page-object'
 class Blog
   include PageObject
 
-  page_url 'http://localhost:8080/BlogSite/blog/index'
+  page_url 'http://localhost:8080/BlogSite/'
 
-  div(:blog_list, :id => 'list-blog')
-  text_field(:blog_post1, :id => 'Post1')
-  text_field(:blog_post2, :id => 'Post2')
-  text_field(:blog_post3, :id => 'Post3')
-  text_field(:blog_post4, :id => 'Post4')
-  text_field(:blog_post5, :id => 'Post5')
-  text_field(:blog_post6, :id => 'Post6')
-  text_field(:blog_post7, :id => 'Post7')
-  text_field(:blog_post8, :id => 'Post8')
-  text_field(:blog_post9, :id => 'Post9')
-  text_field(:blog_post10, :id => 'Post10')
+  div(:post1, :id => '1')
+  div(:post2, :id => '2')
+  div(:post3, :id => '3')
+  div(:post4, :id => '4')
+  div(:post5, :id => '5')
+  div(:post6, :id => '6')
+  div(:post7, :id => '7')
+  div(:post8, :id => '8')
+  div(:post9, :id => '9')
+  div(:post10, :id => '10')
+
+
 end
