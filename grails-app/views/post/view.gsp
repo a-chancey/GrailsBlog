@@ -15,12 +15,22 @@
 	<div>
 		${post.content}
 	</div>
-	
-	<g:each in="${post.comments}" var="comment">
-		<div class="comment">
-		<p>${comment.comment }</p>
-		<p>Made by: ${comment.who.name} on ${comment.dateCreated}</p>
-		</div>
-	</g:each>
+	<div>
+		<h5>Comments:</h5>
+		<g:each in="${post.comments}" var="comment">
+			<div class="comment">
+				<p>
+					${comment.comment }
+				</p>
+				<p>
+					Made by:
+					${comment.who.name}
+					on
+					${comment.dateCreated}
+				</p>
+			</div>
+		</g:each>
+	</div>
+
 </body>
 </html>
