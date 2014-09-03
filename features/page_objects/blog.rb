@@ -6,6 +6,7 @@ class Blog
   page_url 'http://localhost:8080/BlogSite/'
 
   div(:post1, :id => '1')
+  link(:post1_link, :href => '/BlogSite/post/view/1')
   div(:post2, :id => '2')
   div(:post3, :id => '3')
   div(:post4, :id => '4')
