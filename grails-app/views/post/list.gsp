@@ -1,7 +1,7 @@
 <%@ page contentType="text/html;charset=UTF-8" %>
 <html>
   <head>
-      <title>Blagh Posts</title>
+      <title>My Blog</title>
   </head>
   <body>
   <h1>My Posts</h1>
