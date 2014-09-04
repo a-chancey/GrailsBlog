@@ -10,11 +10,13 @@
 <link rel="stylesheet"
 	href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
 <link rel="stylesheet" href="/BlogSite/css/styles.css">
+<link rel="stylesheet" href="/Blogsite/css/simplePagination.css"/>
 
 <script
 	src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script
 	src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<g:javascript library="jquery.simplePagination" />
 
 <style type="text/css">
 img {
@@ -59,9 +61,6 @@ img {
 		<div class="row">
 			<div class="col-sm-2"></div>
 			<div class="col-sm-6">
-			<g:paginate controller="post" action="list" total="${postCount}" offset="${offset}" />
-
-
 				<div id="spinner" class="spinner" style="display: none;">
 					<g:message code="spinner.alt" default="Loading&hellip;" />
 				</div>
@@ -71,7 +70,9 @@ img {
 
 				<h1>My Posts</h1>
 				
-				<g:each controller="post" action="list" in="${posts.size() < 10 ?  posts : posts.subList("${offset}".toInteger(), 10)}" var="post"  status="id">
+				<div id="pagination" >
+				</div>
+				<g:each in="${posts}" var="post">
 				
 					<div id="${post.id}" class="singlepost">
 						<g:link controller="post" action="view" id="${post.id}">
@@ -128,7 +129,35 @@ img {
 			 	
 			 });
 		});
+
+		$(function() {
+			var items = $(".singlepost");
+
+		    var numItems = items.length;
+		    var perPage = 10;
+
+		    // only show the first 2 (or "first per_page") items initially
+		    items.slice(perPage).hide();
+
+		    // now setup your pagination
+		    // you need that .pagination-page div before/after your table
+		    $("#pagination").pagination({
+		        items: numItems,
+		        itemsOnPage: perPage,
+		        cssStyle: 'light-theme',
+		        onPageClick: function(pageNumber) { // this is where the magic happens
+		            // someone changed page, lets hide/show trs appropriately
+		            var showFrom = perPage * (pageNumber - 1);
+		            var showTo = showFrom + perPage;
+
+		            items.hide() // first hide everything, then show for the new page
+		                 .slice(showFrom, showTo).show();
+		        }
+		    });
+		});
 	});
+
+	
 
 </script>
 
