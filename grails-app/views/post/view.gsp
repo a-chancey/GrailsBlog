@@ -46,7 +46,7 @@
 		<div class="row">
 		<div class="col-sm-2">
 		</div>
-		<div id="${post.id}" class="col-sm-6">
+		<div class="col-sm-6">
 	<h1>
 		${post.title}
 	</h1>
