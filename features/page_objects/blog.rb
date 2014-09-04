@@ -25,6 +25,11 @@ class Blog
   link(:post9_link, :href => '/BlogSite/post/view/9')
   div(:post10, :id => '10')
   link(:post10_link, :href => '/BlogSite/post/view/10')
+  div(:post11, :id => '11')
+  link(:post11_link, :href => '/BlogSite/post/view/11')
 
+  text_field(:search, :id => 'search')
+
+  #link(:login, :href => '/BlogSite/user/login')
 
 end

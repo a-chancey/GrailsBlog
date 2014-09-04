@@ -60,7 +60,7 @@ img {
 						</dd>
 						<dt>Password:</dt>
 						<dd>
-							<input type="password" name="password" />
+							<input type="password" name="password" id="password" />
 						</dd>
 					</dl>
 					<g:submitButton name="login" value="Login" />

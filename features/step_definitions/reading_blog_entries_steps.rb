@@ -23,7 +23,7 @@ end
 
 When(/^I choose a blog post$/) do
   on_page Blog do |page|
-    page.post10_link
+    page.post2_link
   end
 end
 
@@ -33,12 +33,17 @@ Then(/^I should see the blog post$/) do
   end
 
 end
-#
-# When(/^I search for a blog post$/) do
-#
-# end
-#
-# Then(/^I should see posts with that value in the title$/) do
-#
-# end
+
+When(/^I search for a blog post$/) do
+  on_page Blog do |page|
+    page.search = 'First'
+  end
+end
+
+Then(/^I should see posts with that value in the title$/) do
+  on_page Blog do |page|
+    test_page_div = page.post1_element.html
+    expect(test_page_div).to  include('display: block;')
+  end
+end
 

@@ -13,7 +13,7 @@ Feature: View Blog Entries
     When I choose a blog post
     Then I should see the blog post
 
-#  Scenario: Search for Blog Post
-#    Given I visit the blog for my favorite blogger
-#    When I search for a blog post
-#    Then I should see posts with that value in the title
+  Scenario: Search for Blog Post
+    Given I visit the blog for my favorite blogger
+    When I search for a blog post
+    Then I should see posts with that value in the title
