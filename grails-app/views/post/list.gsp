@@ -14,6 +14,7 @@
 	src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script
 	src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+	
 <style type="text/css">
 img {
 	max-width: 100%;
@@ -38,9 +39,8 @@ img {
 				<div class="collapse navbar-collapse">
 					<ul class="nav navbar-nav">
 						<li class="active"><a href="/BlogSite/">Home</a></li>
-						<%--
-					<li><a href="link.html">Link</a></li>
-					<li><a href="adultlink.html">Adult Link</a></li>--%>
+						
+					<%--<li><a href="adultlink.html">Adult Link</a></li>--%>
 					</ul>
 				</div>
 			</div>
