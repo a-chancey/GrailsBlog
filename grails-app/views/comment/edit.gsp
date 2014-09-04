@@ -38,9 +38,12 @@ img {
 				<div class="collapse navbar-collapse">
 					<ul class="nav navbar-nav">
 						<li><a href="/BlogSite/">Home</a></li>
-						<%--
-					<li><a href="link.html">Link</a></li>
-					<li><a href="adultlink.html">Adult Link</a></li>--%>
+						<li><g:if test="${session.user}">
+								<g:link controller="user" action="logout">Logout</g:link>
+							</g:if> <g:else>
+								<g:link controller="user" action="login">Login</g:link>
+							</g:else></li>
+						<%--<li><a href="adultlink.html">Adult Link</a></li>--%>
 					</ul>
 				</div>
 			</div>
@@ -83,7 +86,7 @@ img {
 			</div>
 
 			<div class="col-sm-4">
-				<g:link controller="post" action="edit">Create a new post </g:link>
+				<g:secureLink controller="post" action="edit">Create a new post </g:secureLink>
 				<br /> About me! <br /> More stuff to come!
 			</div>
 		</div>
