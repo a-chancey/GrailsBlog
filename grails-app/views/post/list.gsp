@@ -59,12 +59,17 @@ img {
 		<div class="row">
 			<div class="col-sm-2"></div>
 			<div class="col-sm-6">
+			<g:paginate controller="post" action="list" total="${postCount}" offset="${offset}" />
+
+
 				<div id="spinner" class="spinner" style="display: none;">
 					<g:message code="spinner.alt" default="Loading&hellip;" />
 				</div>
 
 				<h1>My Posts</h1>
-				<g:each in="${posts}" var="post">
+				
+				<g:each controller="post" action="list" in="${posts.size() < 10 ?  posts : posts.subList("${offset}".toInteger(), 10)}" var="post"  status="id">
+				
 					<div id="${post.id}">
 						<g:link controller="post" action="view" id="${post.id}">
 							<h2>
@@ -87,7 +92,7 @@ img {
 				</g:each>
 				<p></p>
 			</div>
-			<div class="col-sm-4">
+			<div class="col-sm-4 sidebar-nav" id="sidebar">
 				<g:secureLink controller="post" action="edit">Create a new post </g:secureLink>
 				<br /> About me! <br /> More stuff to come!
 			</div>

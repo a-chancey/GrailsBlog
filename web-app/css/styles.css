@@ -3,6 +3,8 @@ html {
   min-height: 100%;
 }
 body {
+
+    padding-bottom: 40px;
   /* Margin bottom by footer height */
   margin-bottom: 60px;
 }
@@ -14,4 +16,22 @@ body {
   height: 60px;
   background-color: #E9E9EF;
   text-align: center;
+}
+
+.sidebar-nav {
+    padding: 9px 0;
+}
+
+#sidebar {
+    float:right;
+}
+
+#content {
+    margin-left: 0;
+}
+
+@media (max-width: 767px) {
+    #sidebar {
+        float:none;
+    }
 }

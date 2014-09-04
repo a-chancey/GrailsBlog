@@ -12,11 +12,15 @@ class PostController {
 		render(view:'edit', model:[post:post])
 	}
 
+	def postList = {
+		[posts: Post.list(params), postCount: Post.count()]
+	}
+	
 	def list = {
 		render(
 				view:'list',
 				model:[posts:Post.list(sort:'lastUpdated',
-					order:'desc')])
+					order:'desc'), postCount:Post.count(), offset:'0'])
 	}
 
 	def save = {
