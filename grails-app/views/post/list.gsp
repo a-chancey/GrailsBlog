@@ -65,12 +65,15 @@ img {
 				<div id="spinner" class="spinner" style="display: none;">
 					<g:message code="spinner.alt" default="Loading&hellip;" />
 				</div>
+				
+				Search:
+				<input type="text" id="search">
 
 				<h1>My Posts</h1>
 				
 				<g:each controller="post" action="list" in="${posts.size() < 10 ?  posts : posts.subList("${offset}".toInteger(), 10)}" var="post"  status="id">
 				
-					<div id="${post.id}">
+					<div id="${post.id}" class="singlepost">
 						<g:link controller="post" action="view" id="${post.id}">
 							<h2>
 								${post.title}
@@ -108,6 +111,26 @@ img {
 		</div>
 	</footer>
 
+<script>
+	$(document).ready(function(){
+		$("#search").keyup(function(){
+			 var val = $(this).val().toLowerCase();
+			 $(".singlepost").hide();
+			 
+			 $(".singlepost").each(function(){
+				 
+			 	var text = $(this).text().toLowerCase();
+			 	
+			 	if(text.indexOf(val) != -1)
+			 	{
+			 		$(this).show();
+			 	}
+			 	
+			 });
+		});
+	});
+
+</script>
 
 </body>
 </html>
