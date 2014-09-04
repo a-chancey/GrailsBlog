@@ -74,7 +74,9 @@ img {
 				<g:each in="${posts}" var="post">
 				
 					<div id="${post.id}" class="singlepost">
-						<g:link controller="post" action="view" id="${post.id}">
+						<%--<g:set var="linkTitle" value="${post.title}"></g:set>--%>
+						<g:javascript>linkTitle = "${post.title}".replace(/\s/g, ''); </g:javascript>
+						<g:link controller="post" action="view" id="${post.id}" params='[title:"${post.title}".replaceAll('\\s+','-')]'>
 							<h2>
 								${post.title}
 							</h2>

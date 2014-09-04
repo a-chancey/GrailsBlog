@@ -72,6 +72,8 @@ grails.enable.native2ascii = true
 grails.spring.bean.packages = []
 // whether to disable processing of multi part requests
 grails.web.disable.multipart=false
+//hyphenate the links
+grails.web.url.converter = 'hyphenated'
 
 // request parameters to mask when logging exceptions
 grails.exceptionresolver.params.exclude = ['password']
