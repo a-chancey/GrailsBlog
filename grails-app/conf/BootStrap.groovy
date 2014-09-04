@@ -5,6 +5,12 @@ class BootStrap {
 
 	def init = { servletContext ->
 
+		new Post(title:"Firsterer Grails Project",
+		teaser:"Clearing out the clutters test",
+		content:"The full content of the article test",
+		published:true).save()
+
+
 		new Post(title:"First Grails Project",
 		teaser:"Clearing out the clutter",
 		content:"The full content of the article",

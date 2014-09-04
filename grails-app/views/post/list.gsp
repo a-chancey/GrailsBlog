@@ -10,7 +10,7 @@
 <link rel="stylesheet"
 	href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
 <link rel="stylesheet" href="/BlogSite/css/styles.css">
-<link rel="stylesheet" href="/Blogsite/css/simplePagination.css"/>
+<link rel="stylesheet" href="/BlogSite/css/simplePagination.css">
 
 <script
 	src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
@@ -70,8 +70,7 @@ img {
 
 				<h1>My Posts</h1>
 				
-				<div id="pagination" >
-				</div>
+				
 				<g:each in="${posts}" var="post">
 				
 					<div id="${post.id}" class="singlepost">
@@ -95,6 +94,8 @@ img {
 					</div>
 				</g:each>
 				<p></p>
+				<div class="simple-pagination" id="pagination" >
+				</div>
 			</div>
 			<div class="col-sm-4 sidebar-nav" id="sidebar">
 				<g:secureLink controller="post" action="edit">Create a new post </g:secureLink>
@@ -136,21 +137,17 @@ img {
 		    var numItems = items.length;
 		    var perPage = 10;
 
-		    // only show the first 2 (or "first per_page") items initially
 		    items.slice(perPage).hide();
 
-		    // now setup your pagination
-		    // you need that .pagination-page div before/after your table
 		    $("#pagination").pagination({
 		        items: numItems,
 		        itemsOnPage: perPage,
 		        cssStyle: 'light-theme',
-		        onPageClick: function(pageNumber) { // this is where the magic happens
-		            // someone changed page, lets hide/show trs appropriately
+		        onPageClick: function(pageNumber) { 
 		            var showFrom = perPage * (pageNumber - 1);
 		            var showTo = showFrom + perPage;
 
-		            items.hide() // first hide everything, then show for the new page
+		            items.hide() 
 		                 .slice(showFrom, showTo).show();
 		        }
 		    });
