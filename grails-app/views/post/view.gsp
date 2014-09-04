@@ -56,6 +56,9 @@
 	<div>
 		${post.content}
 	</div>
+	<g:link controller="post" action="edit" id="${post.id}">
+          Edit this post 
+          </g:link>
 	<div>
 	<g:link controller="comment" action="edit" id="${post.id}">Add Comment </g:link>
 		<g:if test="${post.comments.isEmpty()}">

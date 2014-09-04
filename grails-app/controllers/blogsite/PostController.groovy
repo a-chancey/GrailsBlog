@@ -20,9 +20,14 @@ class PostController {
 	}
 
 	def save = {
+		//hack job here, may get refactored - necessary to get the post to save on edit
+		def editPost = params
 		def post = loadPost(params.id)
-		post.properties = params
-		if(post.save()) {
+		post.title = editPost.title
+		post.content = editPost.content
+		post.teaser = editPost.teaser
+
+		if(post.save(true)) {
 			redirect(action:'list')
 		} else {
 			render(view:'edit', model:[post:post])
