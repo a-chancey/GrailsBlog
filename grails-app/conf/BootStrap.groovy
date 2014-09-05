@@ -5,12 +5,6 @@ class BootStrap {
 
 	def init = { servletContext ->
 
-		new Post(title:"Firsterer Grails Project",
-		teaser:"Clearing out the clutters test",
-		content:"The full content of the article test",
-		published:true).save()
-
-
 		new Post(title:"First Grails Project",
 		teaser:"Clearing out the clutter",
 		content:"The full content of the article",
@@ -60,6 +54,11 @@ class BootStrap {
 		teaser:"it's all over man.",
 		content:"The full content of the article",
 		published:false).save()
+		
+		new Post(title:"Ignore that last guy, this is the last post",
+			teaser:"it's finally over man",
+			content:"The full content of the article is a lot cooler",
+			published:false).save()
 
 		new User(username:"me",
 		password:"password",

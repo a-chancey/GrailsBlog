@@ -5,6 +5,7 @@ class Blog
 
   page_url 'http://localhost:8080/BlogSite/'
 
+  div(:all_posts, :id => 'allposts')
   div(:post1, :id => '1')
   link(:post1_link, :id => '1')
   div(:post2, :id => '2')
@@ -27,8 +28,8 @@ class Blog
   link(:post10_link, :id => '10')
   div(:post11, :id => '11')
   link(:post11_link, :id => '11')
-  div(:post11, :id => '12')
-  link(:post11_link, :id => '12')
+  div(:post12, :id => '12')
+  link(:post12_link, :id => '12')
 
   text_field(:search, :id => 'search')
 
