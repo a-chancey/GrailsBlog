@@ -67,7 +67,9 @@ img {
 				
 				Search:
 				<input type="text" id="search">
-
+				<br />
+					<g:secureLink controller="post" action="edit"><button type="button">Create a new post</button>  </g:secureLink>
+				<br />
 				<h1>My Posts</h1>
 				
 				
@@ -100,7 +102,6 @@ img {
 				</div>
 			</div>
 			<div class="col-sm-4 sidebar-nav" id="sidebar">
-				<g:secureLink controller="post" action="edit"><button type="button">Create a new post</button> </g:secureLink>
 				<br /> About me! <br /> More stuff to come!
 			</div>
 		</div>

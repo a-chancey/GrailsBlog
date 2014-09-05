@@ -55,6 +55,8 @@ img {
 		<div class="row">
 			<div class="col-sm-2"></div>
 			<div class="col-sm-6" id="content">
+				<g:secureLink controller="post" action="edit"><button type="button">Create a new post</button>  </g:secureLink>
+		
 				<h1>
 					${post.title}
 				</h1>
@@ -90,7 +92,6 @@ img {
 				</div>
 			</div>
 			<div class="col-sm-4">
-				<g:secureLink controller="post" action="edit"><button type="button">Create a new post</button> </g:secureLink>
 				<br /> About me! <br /> More stuff to come!
 			</div>
 		</div>

@@ -86,7 +86,6 @@ img {
 			</div>
 
 			<div class="col-sm-4">
-				<g:secureLink controller="post" action="edit"><button type="button">Create a new post</button>  </g:secureLink>
 				<br /> About me! <br /> More stuff to come!
 			</div>
 		</div>
