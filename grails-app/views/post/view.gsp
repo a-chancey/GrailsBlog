@@ -65,10 +65,10 @@ img {
 					${post.content}
 				</div>
 				<g:secureLink controller="post" action="edit" id="${post.id}">
-          Edit this post 
+          <button type="button">Edit this post</button> 
           </g:secureLink>
 				<div>
-					<g:link controller="comment" action="edit" id="${post.id}">Add Comment </g:link>
+					<g:link controller="comment" action="edit" id="${post.id}"><button type="button">Add Comment</button> </g:link>
 					<g:if test="${post.comments.isEmpty()}">
 					</g:if>
 					<g:else>
@@ -90,7 +90,7 @@ img {
 				</div>
 			</div>
 			<div class="col-sm-4">
-				<g:secureLink controller="post" action="edit">Create a new post </g:secureLink>
+				<g:secureLink controller="post" action="edit"><button type="button">Create a new post</button> </g:secureLink>
 				<br /> About me! <br /> More stuff to come!
 			</div>
 		</div>

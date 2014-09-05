@@ -76,7 +76,7 @@ img {
 					<div id="${post.id}" class="singlepost">
 						<%--<g:set var="linkTitle" value="${post.title}"></g:set>--%>
 						<g:javascript>linkTitle = "${post.title}".replace(/\s/g, ''); </g:javascript>
-						<g:link controller="post" action="view" id="${post.id}" elementId='${post.id}' params='[title:"${post.title}".replaceAll('\\s+','-')]'>
+						<g:link controller="post" action="view" id="${post.id}" params='[title:"${post.title}".replaceAll('\\s+','-')]'>
 							<h2>
 								${post.title}
 							</h2>
@@ -89,9 +89,9 @@ img {
 							${post.lastUpdated}
 						</p>
 						<g:secureLink controller="post" action="edit" id="${post.id}">
-          Edit this post 
+          <button type="button">Edit this post </button>
           </g:secureLink>
-						<g:link controller="post" action="view" id="${post.id}">View Comments</g:link>
+						<g:link controller="post" action="view" id="${post.id}"><button type="button">View Comments</button></g:link>
 
 					</div>
 				</g:each>
@@ -100,7 +100,7 @@ img {
 				</div>
 			</div>
 			<div class="col-sm-4 sidebar-nav" id="sidebar">
-				<g:secureLink controller="post" action="edit">Create a new post </g:secureLink>
+				<g:secureLink controller="post" action="edit"><button type="button">Create a new post</button> </g:secureLink>
 				<br /> About me! <br /> More stuff to come!
 			</div>
 		</div>
