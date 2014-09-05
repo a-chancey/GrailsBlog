@@ -53,8 +53,8 @@ img {
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col-sm-2">
-				<img src="/BlogSite/images/Dance_cat.gif">
-			</div>
+				<%--<img src="/BlogSite/images/Dance_cat.gif">
+			--%></div>
 			<div class="col-sm-6">
 				<h1>Create a comment</h1>
 				<div id="validationerrors">
