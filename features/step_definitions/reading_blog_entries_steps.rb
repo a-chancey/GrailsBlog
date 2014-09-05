@@ -8,16 +8,7 @@ end
 
 Then  /^I should see a summary of my favorite blogger's 10 most recent posts in reverse order$/ do
   on_page Blog do |page|
-    expect(page.post2).not_to be_empty
-    expect(page.post3).not_to be_empty
-    expect(page.post4).not_to be_empty
-    expect(page.post5).not_to be_empty
-    expect(page.post6).not_to be_empty
-    expect(page.post7).not_to be_empty
-    expect(page.post8).not_to be_empty
-    expect(page.post9).not_to be_empty
-    expect(page.post10).not_to be_empty
-    expect(page.post11).not_to be_empty
+    expect(page.all_posts).not_to be_empty
   end
 end
 #defined in common_steps

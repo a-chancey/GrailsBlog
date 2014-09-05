@@ -11,6 +11,6 @@
 
 Then(/^the url should contain information about the post$/) do
   on_page Post do |page|
-    expect(page.current_url).to include('First-Grails-Project')
+    expect(page.current_url).to include('Getting-Ready-for-Go-Live')
   end
 end

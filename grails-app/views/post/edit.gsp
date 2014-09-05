@@ -74,7 +74,7 @@ img {
 								cols="50" />
 						</dd>
 					</dl>
-					<g:submitButton name="submit" value="save" />
+					<g:submitButton name="submit" value="save"/>
 				</g:form>
 			</div>
 			<div class="col-sm-4">
